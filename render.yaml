@@ -1,0 +1,13 @@
+services:
+  - type: web_service
+    name: punch_in_records
+    env: node
+    region: oregon
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
