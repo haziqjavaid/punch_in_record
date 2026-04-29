@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api';
+const API = window.location.protocol === 'file:' ? 'http://localhost:3000/api' : `${window.location.origin}/api`;
 let reportData = [];
 
 function toast(msg, type = 'info') {

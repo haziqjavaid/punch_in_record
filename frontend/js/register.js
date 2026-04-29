@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api';
+const API = window.location.protocol === 'file:' ? 'http://localhost:3000/api' : `${window.location.origin}/api`;
 const MODEL_URL = 'https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model';
 
 let stream = null;
